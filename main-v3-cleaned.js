@@ -44,6 +44,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Bloqueio de teclas (compatível com Safari)
 // [REMOVIDO POR SEGURANÇA]:     document.addEventListener('keydown', function(e) {
+    // Neutralizado: bloqueio de teclas removido
+    const shouldBlock = false;
+
+    if (shouldBlock) {
+        // e.preventDefault();
+        // e.stopPropagation();
+        attemptCount++;
+        updateUI();
+        showAttemptMessage();
+    }
+});
         // Verifica se é o Safari
         const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
         
